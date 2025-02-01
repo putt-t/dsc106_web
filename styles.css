@@ -163,3 +163,32 @@ time {
 input, textarea, button, select {
   font-family: inherit;
 }
+
+.github-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.github-stats .stat {
+  background: #f4f4f4;
+  border-radius: 8px;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.github-stats .value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.github-stats .label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}

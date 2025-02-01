@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Wind Pressure Calculation App",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "year": "2024",
+    "description": "Calculating wind pressures application full stack dev"
+  },
+  {
+    "title": "Geotech Calculation App",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "year": "2025",
+    "description": "Calculating geotech stuff full stack dev"
+  },
+  {
+    "title": "Water Table Depth Prediction",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "year": "2024",
+    "description": "Machine learning project with SE professor"
+  },
+  {
+    "title": "Soil Engineering Properties",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "year": "2024",
+    "description": "Funded machine learning research project to predict engineering soil properties"
+  },
+  {
+    "title": "Lorem ipsum dolor sit amet",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "year": "2023",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "title": "Lorem ipsum dolor sit amet",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "year": "2022",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "title": "Lorem ipsum dolor sit amet",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "year": "2024",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "title": "Consectetur adipiscing elit",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "year": "2025",
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "title": "Ut enim ad minim veniam",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "year": "2025",
+    "description": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "title": "Duis aute irure dolor",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "year": "2022",
+    "description": "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    "title": "Excepteur sint occaecat",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "year": "2021",
+    "description": "Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  {
+    "title": "Labore et dolore magna",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "year": "2023",
+    "description": "Excepteur sint occaecat cupidatat non proident, mollit anim id est laborum."
+  }
+]
