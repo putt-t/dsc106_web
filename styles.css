@@ -12,18 +12,23 @@ body {
     max-width: 100ch;
     margin-inline: auto;
     padding: 10pt;
-}nav {
+}
+
+nav {
   --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   text-align: center;
+  flex-wrap: wrap; 
 }
 
+/* Horizontal navigation for larger screens */
 nav ul {
   display: flex;
   width: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
+  flex-wrap: nowrap;
 }
 
 nav li {
@@ -49,6 +54,9 @@ nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
+
+
+
 
 form {
   display: grid;
@@ -153,10 +161,14 @@ time {
 
 
 .color-scheme {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 80%;
+
+  position: static;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.2rem;
 }
 
 
@@ -192,3 +204,79 @@ input, textarea, button, select {
   color: #666;
   margin-top: 0.5rem;
 }
+
+#projects-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  width: 100%;
+  max-width: 1000px;
+  margin: auto; 
+}
+
+.container svg {
+  width: 250px;
+  max-width: 100%; 
+  height: auto;       
+  flex-shrink: 0;    
+}
+
+.legend {
+  flex: 1; 
+  display: flex;
+  flex-wrap: wrap; 
+  border: 1px solid #ccc;
+  padding: 1em;
+  list-style: none;
+  font-size: 1.2em;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-right: 1.5em;
+  margin-bottom: 0.5em;
+  white-space: nowrap;
+}
+
+.legend-item .swatch {
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+  aspect-ratio: 1;
+  background-color: var(--color);
+  border-radius: 5px;
+}
+
+
+.container svg {
+  &:has(path:hover) {
+    path:not(:hover) {
+      opacity: 0.5;
+    }
+  }
+}
+
+.container svg path {
+  transition: 300ms;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) { 
+    fill: var(--color);
+  }
+}
+
+path {
+  cursor: pointer;
+}
+  
