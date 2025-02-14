@@ -27,22 +27,22 @@ async function loadData() {
         // Add total commits
         dl.append('dt').text('Total commits');
         dl.append('dd').text(commits.length);
+        
 
         const fileLengths = d3.rollups(
             data,
             (v) => d3.max(v, (v) => v.line),
             (d) => d.file
-        );
+          );
+        
+          const averageFileLength = d3.mean(fileLengths, (d) => d[1]);
+        
+          
+          dl.append('dt').text('Average File Length');
+          dl.append('dd').text(
+            averageFileLength ? averageFileLength.toFixed(2) : 'N/A'
+          );
 
-        const averageFileLength = d3.mean(fileLengths, (d) => d[1]);
-
-        const workByPeriod = d3.rollups(
-            data,
-            (v) => v.length,
-            (d) => new Date(d.datetime).toLocaleString('en', { dayPeriod: 'short' })
-        );
-
-        const maxPeriod = d3.greatest(workByPeriod, (d) => d[1])?.[0];
     }
 
     processCommits();
@@ -157,11 +157,16 @@ function createScatterplot() {
             updateTooltipVisibility(true);
         });
 
-        const brush = d3.brush()
-        .extent([[usableArea.left, usableArea.top], [usableArea.right, usableArea.bottom]])
+        const brush = d3
+        .brush()
+        .extent([
+          [usableArea.left, usableArea.top],
+          [usableArea.right, usableArea.bottom]
+        ])
         .on('start brush end', brushed);
-
-        svg.append('g').attr('class', 'brush').call(brush);
+      
+      svg.append('g').attr('class', 'brush').call(brush);
+      dots.raise();
 }
 function updateTooltipContent(commit) {
     const link = document.getElementById('commit-link');
